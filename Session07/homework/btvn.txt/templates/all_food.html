@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        {% for food in FOOD %}
+        <h1>món ăn số{{loop.index}}</h1>
+    <h1>all foods here </h1>
+    <img src="{{food.link}}" alt="">
+    
+   <p>Tiêu đề: {{food.title}} </p> 
+   <p> Mô tả: {{food.description}}</p>
+   {% if food_type =='food' %}
+    <p>loại: đồ ăn</p>
+    {% else %}   
+    <p>Loai:đồ uống</p>
+    {% endif %}
+   <p>loại: {{food.food_type}}</p>
+   <a href="/foods/detail/{{loop.index0}}">xem chi tiết></a>
+   <a href="/foods/delete/{{loop.index0}}">xóa món ăn</a>
+   {% endfor %}
+  
+    
+</body>
+</html>

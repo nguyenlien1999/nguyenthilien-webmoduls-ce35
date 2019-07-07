@@ -1,0 +1,131 @@
+Lesson 1	
+Web
+Front end đằng trước,html css
+Backend đằng sau , php, python  db logic
+Cho google về flask và làm theo
+
+
+
+Mục tiêu
+Mô hình - các thành phần cơ bản
+Cấu trúc cơ bản - Cách tổ chức code của flask
+Truyền dữ liệu từ server - client
+
+Web
+Web là gì ?
+Tại sao nên học web?
+Làm web bằng cách nào?
++ Định nghĩa website. WEBSITE (Tạm dịch là "Trang mạng"), còn gọi là trang web, là một tập hợp các trang web con, bao gồm văn bản, hình ảnh, video, flash v.v..
++ Web là cách dễ và nhanh để đưa ứng dụng đến người dùng: phần mềm kế toán, web kế toán
++ Có nhiều ngôn ngữ có thể làm web: php, c#, java, javascript, python
++ Cơ bản các ngôn ngữ lập trình web sẽ tạo ra html - Ngôn ngữ đánh dấu siêu văn bản
+
+Chuẩn bị
+Cài đặt:
+- flask
+python -m pip install Flask
+- flask snippet: Plugin của visual code
+Cài đặt: https://marketplace.visualstudio.com/items?itemName=cstrap.flask-snippets
+Sử dụng: https://marketplace.visualstudio.com/items?itemName=cstrap.flask-snippets
+
+
+
+
+Flask
++ Xóa host và port đi để sử dụng mặc định
+
+Flask
++ template chưa dùng nên xóa đi
++ host và post trong code
++ 127.0.0.1 là địa chỉ loopback
+
+127.0.0.1
+Địa chỉ IP 127.0.0.1 là địa chỉ IPv4 có mục đích đặc biệt được gọi là localhost hoặc địa chỉ loopback. Tất cả các máy tính đều sử dụng địa chỉ này nhưng chúng không được phép giao tiếp với các thiết bị khác như địa chỉ IP thực.
+Máy tính của bạn có thể được gán địa chỉ Private IP 192.168.1.115 để giao tiếp với một router và các thiết bị kết nối mạng khác. Tuy nhiên, nó vẫn gắn liền với địa chỉ 127.0.0.1 đặc biệt này, với ý nghĩa là "máy tính này" hoặc địa chỉ bạn đang sử dụng.
+Địa chỉ loopback chỉ được sử dụng bởi máy tính bạn đang truy cập và chỉ dành cho các trường hợp đặc biệt. Điều này không giống như một địa chỉ IP thông thường, được sử dụng để truyền file đến và từ các thiết bị được kết nối mạng khác.
+
+https://quantrimang.com/tai-sao-dia-chi-ip-cua-localhost-la-127001-125681
+
+Flask
+
+Flask
+
+Flask
+- Mỗi route chào được mỗi một người
+
+- Muốn chào thêm một người lại phải thêm 1 route
+
+=> Làm thế nào để viết chung được
+
+Flask
+=> variable
+
+Ex
+
+Ex
+
+Flask
+- làm sao để có một trang web đẹp thế này? Có ảnh, có link, video...
+
+Flask
+
+Flask - Structure
+- app.py: Chứa code python 
+- Thư mục templates chứa các file html
+
+Flask - Structure
+poem.html: Chứa nội dung của bài thơ.
+
+app.py: code python
+
+làm thế nào để ráp hai phần này lại?
+
+=> render_template
+
+
+Flask - Structure
+
+HTML không phải là ngôn ngữ lập trình
+
+- Phần html chỉ hiển thị thông tin chứ không chịu trách nhiệm sinh ra bài thơ
+- Quá trình tổng hợp và xử lý dữ liệu sẽ xử lý ở app.py - ngôn ngữ python
+- Do HTML không phải là ngôn ngữ lập trình nên không có các cấu trúc điều khiển như: if, while, for...
+
+Flask - Structure
+
+Templates?
+
+HTML # Templates 
+Jinja2 (The Python Template Engine)
+
+flask template?
+
+Flask - Structure
+flask template?
+
+Flask - Structure
+flask template?
+
+Flask - Structure
+
+Flask - Structure
+
+Sử dụng 3 biến => Có cách nào quản lý tốt hơn?
+
+Flask - Structure
+
+
+Flask - Structure
+
+
+Flask - Structure
+Để quản lý dữ liệu bài thơ tốt hơn => Dùng dictionary để chia từng phần title, body, author
+=> Quản lý nhiều bài thơ thì sao?
+
+Flask - Structure
+
+Flask - Structure
+Giả sử có thêm thông tin giới tính tác giả, cần thêm xưng danh trước tên tác giả:
++ Nếu là nam thì thêm Mr <Tên tác giả>
++ Nếu là nữ thì thêm Ms <Tên tác giả>
+Google is my teacher
